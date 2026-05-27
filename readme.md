@@ -1,4 +1,4 @@
-# Front-Films Copy for CI/CD 
+# Front-Films Copy for CI/CD with GitHub Actions
 
 Proyecto didáctico de desarrollo web centrado en el uso de componentes web creados sin ningún framework. El objetivo es practicar la construcción de interfaces con Web Components y organizar el código con TypeScript. La integración de Vitest se abordará en la siguiente etapa del curso.
 
