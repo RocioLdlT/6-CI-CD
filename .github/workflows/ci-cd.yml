@@ -27,23 +27,23 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd 6-CI-CD # Replace with your actual project directory # Importante, es sensible a mayúsculas y minúsculas, hay que escribir el nombre al que queremos referirnos tal cual.
+          cd 6-CI-CD
           npm install
 
       - name: Run linting
         run: |
-          cd 6-CI-CD # Replace with your actual project directory
+          cd 6-CI-CD
           npm run lint
 
       - name: Run tests
         run: |
-          cd 6-CI-CD # Replace with your actual project directory
+          cd 6-CI-CD
           npm run test:c
                 - name: Run tests
 
       - name: Build project          
         run: |
-          cd 6-CI-CD # Replace with your actual project directory
+          cd 6-CI-CD
           npm run build
 
 
