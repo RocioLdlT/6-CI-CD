@@ -26,19 +26,24 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Install dependencies
-        run: npm ci
-
-      - name: goto project directory
-        run: npm 6-CI-CD # Importante, es sensible a mayúsculas y minúsculas, hay que escribir el nombre al que queremos referirnos tal cual.
-
+        run: |
+          cd 6-CI-CD # Replace with your actual project directory # Importante, es sensible a mayúsculas y minúsculas, hay que escribir el nombre al que queremos referirnos tal cual.
+          npm install
 
       - name: Run linting
-        run: npm run lint
+        run: |
+          cd 6-CI-CD # Replace with your actual project directory
+          npm run lint
 
       - name: Run tests
-        run: npm run test:c
+        run: |
+          cd 6-CI-CD # Replace with your actual project directory
+          npm run test:c
+          
+      - name: Run build
+        run: |
+          cd 6 CI-CD
+          npm run build
 
-      - name: Build project
-        run: npm run build 
 
 
