@@ -1,0 +1,51 @@
+name: Node.js CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy: # Para crear una estrategia a seguir
+      matrix: # Creamos variable a utilizar
+        node-version: [24.x]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+
+      - name: Set Up Node.js ${{ matrix.node-version }} # Utilizamos variable
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install dependencies
+        run: |
+          cd 6-CI-CD
+          npm install
+
+      - name: Run linting
+        run: |
+          cd 6-CI-CD
+          npm run lint
+
+      - name: Run tests
+        run: |
+          cd 6-CI-CD
+          npm run test:c
+                - name: Run tests
+
+      - name: Build project          
+        run: |
+          cd 6-CI-CD
+          npm run build
+
+
+
+
