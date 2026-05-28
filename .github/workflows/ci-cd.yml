@@ -39,6 +39,12 @@ jobs:
         run: |
           cd 6-CI-CD # Replace with your actual project directory
           npm run test:c
+                - name: Run tests
+
+      - name: Build project          
+        run: |
+          cd 6-CI-CD # Replace with your actual project directory
+          npm run build
 
 
 
